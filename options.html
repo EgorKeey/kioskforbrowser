@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Настройки расширения</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="SettingsBody">
+    <div class="SettingsContainer">
+        <div class="SettingsFrame">
+            <div>
+                <h1>Киоск для браузера</h1>
+                <h2>Настройки расширения</h2>
+                <span>разрешить домашнюю кнопку</span>
+                <input type="checkbox" id="enablebutton"></input>
+                <label>Введите текст кнопки:</label>
+                <input class="InputText" type="text" id="buttontext" placeholder="Введите текст кнопки">
+                <label>Введите ссылку:</label>
+                <input class="InputText" type="text" id="link" placeholder="https://example.com">
+                <button id="save">Сохранить изменения</button>
+            </div>
+        </div>
+    </div>
+    <script src="options.js"></script>
+</body>
+</html>

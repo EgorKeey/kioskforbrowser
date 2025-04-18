@@ -1,0 +1,81 @@
+.SettingsBody{
+    background-image: url("./images/Background.png");
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+.SettingsContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+
+
+.SettingsFrame{
+    div {
+        background-color: #fff8e1; 
+        border: 1px solid #e0e0e0; 
+        border-radius: 5px;
+        padding: 15px;
+        margin: 10px 0;
+    }
+    
+    h1{
+        text-align: center;
+        color: #f07d1f;
+        text-shadow: rgba(0, 0, 0, 0.8) 2px 0 3px;
+        font-size: 32pt;
+        font-weight: bold;
+    }
+
+    h2 {
+        color: #d67b3c;
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+    
+    .InputText {
+        width: 95%;
+        padding: 10px;
+        border: 1px solid #d0d0d0;
+        border-radius: 4px;
+        margin-bottom: 15px;
+        transition: border-color 0.3s;
+    }
+
+    .InputText:focus {
+        border-color: #d67b3c;
+        outline: none;
+    }
+    
+
+    span {
+        font-size: 12pt;
+        color: #5e5e5e;
+    }
+    
+    label {
+        font-weight: bold;
+        font-size: 12pt;
+        color: #d67b3c; 
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+    button {
+        background-color: #d67b3c;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    button:hover {
+        background-color: #cb6c34;
+    }
+    
+  }
