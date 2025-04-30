@@ -1,7 +1,7 @@
-chrome.storage.sync.get(['enablebtn'], function(result) {
+chrome.storage.sync.get(['enablebtn','enabletimer'], function(result) {
     if(result.enablebtn){
 
-        // Получаем ссылку из хранилища
+        // Получаем данные из хранилища
         chrome.storage.sync.get(['link','buttontext'], function(result) {
             createFloatingLink(result.link || 'https://example.com', result.buttontext || 'Кнопка');
         });
@@ -20,6 +20,26 @@ chrome.storage.sync.get(['enablebtn'], function(result) {
             linkContainer.appendChild(link);
             document.body.appendChild(linkContainer);
         }
+    }
+
+    if(result.enabletimer){
+        //получаем данные из хранилища
+        chrome.storage.sync.get(['timer','link'], function(result) {
+            const redirectUrl = result.link;
+            let idleTimer;
+            
+            const resetIdleTimer = () => {
+              // отменяем предыдущий таймер
+              clearTimeout(idleTimer);
+              // запускаем отсчёт на 5 секунд
+              idleTimer = setTimeout(() => window.location.href = redirectUrl, result.timer*1000);
+            };
+            
+            // регистрируем события движения мыши и нажатия клавиш
+            ['mousemove', 'keypress'].forEach(event => document.addEventListener(event, resetIdleTimer));
+            resetIdleTimer();
+            
+            });
     }
 });
 
