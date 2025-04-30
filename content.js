@@ -1,10 +1,8 @@
-chrome.storage.sync.get(['enablebtn','enabletimer'], function(result) {
+// Получаем данные из хранилища
+chrome.storage.sync.get(['enablebtn','enabletimer','link','buttontext','timer','link'], function(result) {
     if(result.enablebtn){
 
-        // Получаем данные из хранилища
-        chrome.storage.sync.get(['link','buttontext'], function(result) {
-            createFloatingLink(result.link || 'https://example.com', result.buttontext || 'Кнопка');
-        });
+        createFloatingLink(result.link || 'https://example.com', result.buttontext || 'Кнопка');
         
         function createFloatingLink(url, txt) {
             // Создаем div для ссылки
@@ -22,9 +20,7 @@ chrome.storage.sync.get(['enablebtn','enabletimer'], function(result) {
         }
     }
 
-    if(result.enabletimer){
-        //получаем данные из хранилища
-        chrome.storage.sync.get(['timer','link'], function(result) {
+    if(result.enabletimer & window.location.href != result.link){
             const redirectUrl = result.link;
             let idleTimer;
             
@@ -34,12 +30,10 @@ chrome.storage.sync.get(['enablebtn','enabletimer'], function(result) {
               // запускаем отсчёт на 5 секунд
               idleTimer = setTimeout(() => window.location.href = redirectUrl, result.timer*1000);
             };
-            
+
             // регистрируем события движения мыши и нажатия клавиш
             ['mousemove', 'keypress'].forEach(event => document.addEventListener(event, resetIdleTimer));
             resetIdleTimer();
-            
-            });
     }
 });
 
