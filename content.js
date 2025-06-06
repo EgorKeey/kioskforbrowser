@@ -13,13 +13,12 @@ chrome.storage.sync.get(['enablebtn','enabletimer','link','buttontext','timer','
             const link = document.createElement('a');
             link.href = url;
             link.textContent = txt;
-            link.target = '_blank';
             
             linkContainer.appendChild(link);
             document.body.appendChild(linkContainer);
         }
     }
-
+    // условие, если включен таймер
     if(result.enabletimer & window.location.href != result.link){
             const redirectUrl = result.link;
             let idleTimer;
