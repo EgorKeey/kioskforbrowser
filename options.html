@@ -12,12 +12,22 @@
             <div>
                 <h1>Киоск для браузера</h1>
                 <h2>Настройки расширения</h2>
+                <span>разрешить кнопки киоска</span>
+                <input type="checkbox" id="enablebutton0"></input>
+                <br>
                 <span>разрешить домашнюю кнопку</span>
-                <input type="checkbox" id="enablebutton"></input>
+                <input type="checkbox" id="enablebutton1"></input>
                 <label>Введите текст кнопки:</label>
-                <input class="InputText" type="text" id="buttontext" placeholder="Введите текст кнопки">
+                <input class="InputText" type="text" id="buttontext1" placeholder="Главное меню">
                 <label>Введите ссылку:</label>
                 <input class="InputText" type="text" id="link" placeholder="https://example.com">
+                <span>разрешить кнопку "назад"</span>
+                <input type="checkbox" id="enablebutton2"></input>
+                <label>Введите текст кнопки:</label>
+                <input class="InputText" type="text" id="buttontext2" placeholder="Назад">
+                <label>Введите ширину панели навигации:</label>
+                <span id="panelwidthvalue"></span>
+                <input class="InputText" type="range" id="panelwidth" min="100" max="300" value="250" step="5" placeholder="Введите ширину панели навигации (min: 100px, max: 300px)">
                 <span>разрешить возврат на домашнюю страницу по бездействию</span>
                 <input type="checkbox" id="enabletimer"></input>
                 <label>Время обновления страницы в секундах:</label>
