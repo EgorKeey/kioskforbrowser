@@ -5,7 +5,9 @@ chrome.storage.sync.get(['enablebutton0','enablebutton1','enablebutton2','enable
             const panelwidth = result.panelwidth;
             const linkContainer = document.createElement('div');
             linkContainer.id = 'button-link';
-            linkContainer.style.width = panelwidth;
+            linkContainer.style.height = panelwidth;
+            // Сдвигаем содержимое страницы под панель упавления
+            document.body.style.marginTop = panelwidth + 'px';
         // создание домашней кнопки
         if(result.enablebutton1){
             createHomeButton(result.link || 'https://example.com', result.buttontext1 || "Главное меню");
@@ -23,8 +25,7 @@ chrome.storage.sync.get(['enablebutton0','enablebutton1','enablebutton2','enable
                 linkContainer.appendChild(frame);
                 document.body.appendChild(linkContainer);
     
-                // Сдвигаем содержимое страницы под панель упавления
-                document.body.style.marginLeft = panelwidth + 'px';
+                
             }
         }
         // создание кнопки "назад"
@@ -43,9 +44,6 @@ chrome.storage.sync.get(['enablebutton0','enablebutton1','enablebutton2','enable
                 frame.appendChild(link);
                 linkContainer.appendChild(frame);
                 document.body.appendChild(linkContainer);
-    
-                // Сдвигаем содержимое страницы под панель упавления
-                document.body.style.marginLeft = panelwidth + 'px';
             }
         }
     
