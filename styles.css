@@ -1,7 +1,7 @@
 .SettingsBody{
     background-image: url("./images/Background.png");
     background-position: 50% 50%;
-    background-size: cover;
+    background-size: auto;
 }
 
 .SettingsContainer{
@@ -14,7 +14,7 @@
 
 .SettingsFrame{
     div {
-        background-color: #fff8e1; 
+        background-image: linear-gradient(to bottom, rgb(21,104,177), rgb(237,63,86)); 
         border: 1px solid #e0e0e0; 
         border-radius: 5px;
         padding: 15px;
@@ -23,14 +23,15 @@
     
     h1{
         text-align: center;
-        color: #f07d1f;
+        color: #ffffff;
         text-shadow: rgba(0, 0, 0, 0.8) 2px 0 3px;
         font-size: 32pt;
         font-weight: bold;
     }
 
     h2 {
-        color: #d67b3c;
+        color: #ffffff;
+        text-shadow: rgba(0, 0, 0, 0.8) 2px 0 3px;
         font-size: 24px;
         margin-bottom: 15px;
     }
@@ -52,21 +53,22 @@
 
     span {
         font-size: 12pt;
-        color: #5e5e5e;
+        color: #ffffff;
     }
     
     label {
         font-weight: bold;
+        text-shadow: rgba(0, 0, 0, 0.8) 2px 0 3px;
         font-size: 12pt;
-        color: #d67b3c; 
+        color: #ffffff; 
         display: block;
         margin-bottom: 5px;
     }
     
     button {
-        background-color: #d67b3c;
+        background-image: linear-gradient(to bottom, rgb(21,104,177), rgb(237,63,86)); 
         color: #fff;
-        border: none;
+        border: 3px solid #ffffff;
         border-radius: 5px;
         padding: 10px 20px;
         font-size: 16px;
@@ -75,7 +77,7 @@
     }
     
     button:hover {
-        background-color: #cb6c34;
+        background-image: linear-gradient(to bottom, rgb(19, 95, 161), rgb(204, 54, 74)); 
     }
     
   }
