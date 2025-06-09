@@ -26,7 +26,7 @@ chrome.storage.sync.get(['enablebtn','enabletimer','link','buttontext','timer','
             const resetIdleTimer = () => {
               // отменяем предыдущий таймер
               clearTimeout(idleTimer);
-              // запускаем отсчёт на 5 секунд
+              // запускаем отсчёт
               idleTimer = setTimeout(() => window.location.href = redirectUrl, result.timer*1000);
             };
 
